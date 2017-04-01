@@ -1,0 +1,29 @@
+{
+    "hash": "abcd",
+    "data": [
+        {
+            "name": "Sidharth",
+            "desig": "DGP",
+            "category": 1,
+            "phone": "+917558821477"
+        },
+        {
+            "name": "Toji",
+            "desig": "DGP",
+            "category": 1,
+            "phone": "+917551121477"
+        },
+        {
+            "name": "Devanandu",
+            "desig": "CI",
+            "category": 1,
+            "phone": "+917559921477"
+        },
+        {
+            "name": "Abin",
+            "desig": "CI",
+            "category": 1,
+            "phone": "+917558821400"
+        }
+    ]
+}
