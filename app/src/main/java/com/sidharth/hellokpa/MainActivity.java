@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements ContactFragment.O
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme_NoActionBar);
         super.onCreate(savedInstanceState);
         mContext = this;
         setContentView(R.layout.activity_main);
@@ -187,7 +188,7 @@ public class MainActivity extends AppCompatActivity implements ContactFragment.O
 
             @Override
             public void onResponse(String response) {
-                Log.e("HAI",response.toString());
+                Log.e("HAI",response);
 //                try {
 //                    String url = Uri.parse("http://sid.qpha.org/register/login/")
 //                            .buildUpon()
@@ -233,7 +234,7 @@ public class MainActivity extends AppCompatActivity implements ContactFragment.O
         getMenuInflater().inflate(R.menu.menu_main, menu);
         final MenuItem searchItem = menu.findItem(R.id.action_search);
 
-        final SearchView searchView = (SearchView) searchItem.getActionView();;
+        final SearchView searchView = (SearchView) searchItem.getActionView();
         final TabLayout host = (TabLayout) findViewById(R.id.tabs);
         if (searchView != null) {
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -269,6 +270,10 @@ public class MainActivity extends AppCompatActivity implements ContactFragment.O
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             startActivity(new Intent(MainActivity.this,AdminActivity.class));
+            return true;
+        }
+        else if (id == R.id.action_credits) {
+            startActivity(new Intent(MainActivity.this,Credits.class));
             return true;
         }
 
@@ -426,11 +431,11 @@ public class MainActivity extends AppCompatActivity implements ContactFragment.O
             // Return a ContactsFragment (defined as a static inner class below).
             if(position==1){
                 Log.d("TESTSETSET","ASDASD");
-                return new ContactFragment().newInstance(category);
+                return ContactFragment.newInstance(category);
             }else if(position==2){
-                return new NotificationFragment().newInstance(1);
+                return NotificationFragment.newInstance(1);
             }
-            return new CategoryFragment().newInstance(1);
+            return CategoryFragment.newInstance(1);
         }
 
         @Override

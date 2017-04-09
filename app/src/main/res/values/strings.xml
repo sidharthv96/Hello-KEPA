@@ -11,4 +11,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_credits">Credits</string>
+    <string name="developed_with_u2661_by_sidharth_v">Developed with ♡ by Sidharth V</string>
+    <string name="government_engineering_college_thrissur">Government Engineering College, Thrissur</string>
+    <string name="kepa_district_committee_2016_18">KEPA District Committee 2016-18</string>
+    <string name="kpakepatcr_gmail_com">kpakepatcr@gmail.com</string>
+    <string name="kepa_logo">KEPA logo</string>
+    <string name="_7558821477">7558821477</string>
 </resources>
